@@ -1,0 +1,51 @@
+<div id="boostWrapper">
+<div id="boostHeader"><a href="https://echamilo.univ-grenoble-alpes.fr/courses/BOOSTENGLISH/index.php?id_session=0"><img alt="" height="50px" src="https://boost-english.fr/images/logo.png" width="45px" /></a>
+<p class="site-name">&nbsp;Boost&#39;English</p>
+
+<div class="theme-filters" id="themeFilters"><button class="theme-btn" data-theme="Everyday communication">Everyday<br />
+<span class="subtitle" data-theme="Everyday communication">Communication</span></button><button class="theme-btn" data-theme="Professional Communication">Professional<br />
+<span class="subtitle" data-theme="Professional Communication">Communication</span></button><button class="theme-btn" data-theme="Specialist Communication">Specialist<br />
+<span class="subtitle" data-theme="Specialist Communication">Communication</span></button><button class="theme-btn" data-theme="Learning focus">Learning<br />
+<span class="subtitle" data-theme="Learning focus">Focus</span></button><input class="searchField" id="searchField" onfocus="$(this).select()" size="20" type="text" value="Type a keyword" />
+<div>&nbsp;
+<div class="titre1 inline_block"><span id="myBricksToggle" class="click" onclick="displayMyBricks(event)">My bricks</span></div>
+
+<div id="myBricksArrow">&or;</div>
+</div>
+</div>
+</div>
+
+<div id="myBricks">&nbsp;</div>
+<div id="myBricksBackdrop" aria-hidden="true"></div>
+
+<div class="right_block">
+<div id="accueil">
+<h1 class="titre1">Welcome to Boost&#39;English!</h1>
+
+<p>A platform designed to help you work efficiently on your English. Click <strong><u><a href="https://videos.univ-grenoble-alpes.fr/video/4867-boostenglish/" target="_blank">here</a></u></strong> &nbsp;to see how it&nbsp;works. Explore and enjoy!</p>
+<iframe allowfullscreen="" height="454" src="https://videos.univ-grenoble-alpes.fr/video/4867-boostenglish/?is_iframe=true" style="padding: 0; margin: 0; border:0" title="Boost'English" width="800"></iframe></div>
+</div>
+
+<div id="boostMenus">&nbsp;</div>
+
+<div id="lpMenuContainer">&nbsp;</div>
+
+<div id="iframeMainContent">
+<p class="titre1" id="bricks_found">Bricks found</p>
+<iframe id="inlineFrameExample" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik" title="Inline Frame Example"></iframe>
+
+<div id="bricksFound" style="display:none;">&nbsp;</div>
+</div>
+</div>
+
+<!-- Bouton dans le header (ou près de My bricks) -->
+<button id="be-tools-btn" class="theme-btn" style="background:#263c6e">Chamilo tools</button>
+
+<!-- Panneau latéral + backdrop -->
+<aside id="be-tools" class="be-offcanvas" aria-hidden="true">
+  <div class="be-offcanvas__panel" role="dialog" aria-modal="true" aria-label="Chamilo tools">
+    <button id="be-tools-close" class="be-close">✕</button>
+    <div id="be-tools-host"><!-- on déplacera #course_tools ici --></div>
+  </div>
+  <div class="be-offcanvas__backdrop"></div>
+</aside>

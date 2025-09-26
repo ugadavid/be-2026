@@ -1,0 +1,113 @@
+<html>
+<head>
+  <title>I want more</title>
+  <link href="https://echamilo.univ-grenoble-alpes.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+  <style>
+    :root{
+      --be-blue:#41479b; --be-orange:#f5a623; --be-dark:#353535; --be-text:#444545;
+      --be-bg:#f7f7f7; --be-card:#fff; --radius:12px; --gap:16px;
+    }
+    body{color:var(--be-text);font-size:18px;line-height:1.45;}
+    h1,h2{margin:0 0 12px;}
+    h1{color:var(--be-blue);font-size:30px;font-weight:700;}
+    h2{color:var(--be-blue);font-size:20px;}
+    .page{padding:20px;margin-inline:0;}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
+    @media (max-width:900px){.grid{grid-template-columns:1fr;}}
+    .card{
+      background:var(--be-card); border:1px solid #ececec; border-radius:var(--radius);
+      padding:18px; box-shadow:0 1px 2px rgba(0,0,0,.05);
+    }
+    .badge{display:inline-block;background:var(--be-bg);color:var(--be-dark);
+      border-radius:999px;padding:4px 10px;font-size:.9rem;margin-left:8px;}
+    .note{
+      background:var(--be-bg); padding:12px 16px; border-left:4px solid var(--be-orange);
+      border-radius:var(--radius); margin:12px 0 0;
+    }
+    .video{position:relative;width:100%;max-width:560px;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#000;}
+    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+    a{color:var(--be-orange);font-weight:700;text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .btn-be{display:inline-block;background:#f2f2f2;color:var(--be-orange);
+      padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:700;}
+    .btn-be:hover{background:#e3e3e3;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>I want more</h1>
+
+    <div class="grid">
+      <!-- 1) Adjectives and adverbs (Video) -->
+      <div class="card">
+        <h2>Adjectives and adverbs <span class="badge">Video</span></h2>
+        <div class="video" aria-label="Adjectives and adverbs – video">
+          <iframe
+            src="https://www.youtube.com/embed/1N1MpESNE6o?start=0"
+            title="Adjectives and adverbs"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- 2) Stative verbs (Link) -->
+      <div class="card">
+        <h2>Stative verbs <span class="badge">Article</span></h2>
+        <p>
+          <a class="btn-be" href="https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/stative-verbs"
+             target="_blank" rel="noopener noreferrer">
+            🔗 British Council – Stative verbs
+          </a>
+        </p>
+        <div class="note">
+          <p><u>URL:</u> <a href="https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/stative-verbs" target="_blank" rel="noopener noreferrer">
+            https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/stative-verbs
+          </a></p>
+        </div>
+      </div>
+
+      <!-- 4) IELTS/TOEFL adjectives (Link) -->
+      <div class="card">
+        <h2>IELTS and TOEFL vocabulary – adjectives <span class="badge">Resource</span></h2>
+        <p>
+          <a class="btn-be" href="https://www.engvid.com/english-resource/ielts-toefl-vocabulary-adjectives/"
+             target="_blank" rel="noopener noreferrer">
+            🔗 engVid – Adjectives
+          </a>
+        </p>
+        <div class="note">
+          <p><u>URL:</u> <a href="https://www.engvid.com/english-resource/ielts-toefl-vocabulary-adjectives/" target="_blank" rel="noopener noreferrer">
+            https://www.engvid.com/english-resource/ielts-toefl-vocabulary-adjectives/
+          </a></p>
+        </div>
+      </div>
+
+      <!-- 3) Adjective Order (Video) -->
+      <div class="card">
+        <h2>Adjective Order in English <span class="badge">Video</span></h2>
+        <div class="video" aria-label="Adjective order – video">
+          <iframe
+            src="https://www.youtube.com/embed/qcOfYlMfDz0?start=0"
+            title="Adjective order in English"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      
+
+      <!-- 5) English at work: Speak like a manager (Video) -->
+      <div class="card">
+        <h2>English at work: Speak like a manager <span class="badge">Video</span></h2>
+        <div class="video" aria-label="English at Work – Speak like a manager">
+          <iframe
+            src="https://www.youtube.com/embed/kqvK8DkpDCE?start=0"
+            title="English at Work – Speak like a manager"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

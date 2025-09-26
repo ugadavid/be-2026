@@ -1,0 +1,204 @@
+<html>
+<head>
+	<link href="https://chamilo.grenoble-inp.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+	<title>Boost&#39;English - Way-finding</title>
+	<style type="text/css">html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rocket {
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+  width: clamp(40px, 8vw, 100px);
+}
+
+.stars {
+  position: absolute;
+  top: 20vh;
+  left: 30vw;
+  width: clamp(20px, 5vw, 60px);
+}
+
+.start-stars {
+  position: absolute;
+  top: 20vh;
+  left: 15vw;
+  width: clamp(20px, 5vw, 60px);
+}
+
+.title {
+  position: absolute;
+  top: 5vh;
+  left: 55vw;
+  width: clamp(200px, 35vw, 460px);
+}
+
+.at-the-end {
+  position: absolute;
+  top: 25vh;
+  left: 60vw;
+  width: clamp(150px, 25vw, 360px);
+}
+
+.text-box {
+  position: absolute;
+  top: 30vh;
+  left: 55vw;
+  width: clamp(600px, 35vw, 420px);
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: bold;
+  line-height: 1.4;
+  color: black;
+}
+
+.start-text-box {
+  position: relative;
+  top: 5vh;
+  left: 35vw;
+  width: clamp(800px, 35vw, 420px);
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: bold;
+  line-height: 1.4;
+  color: black;
+}
+
+.text-box::after {
+  content: attr(data-text);
+  display: block;
+  white-space: pre-line;
+}
+
+
+.hand {
+  position: absolute;
+  bottom: 10vh;
+  right: 5vw;
+  width: clamp(60px, 15vw, 150px);
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 5vh;
+  left: 55vw;
+  width: clamp(150px, 35vw, 380px);
+}
+
+.astronaut {
+  position: absolute;
+  bottom: 10vh;
+  left: 15vw;
+  width: clamp(150px, 25vw, 300px);
+}
+
+
+.start-astronaut {
+  position: absolute;
+  bottom: 10vh;
+  left: 5vw;
+  width: clamp(100px, 25vw, 300px);
+}
+
+
+
+.btn-exo {
+  position: relative;
+  text-decoration: none;
+  background-color: #f5a623;
+  border: none;
+  color: #1a2a47;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  
+}
+
+.btn-exo:hover {
+  background-color: #f29400;
+}
+
+.btn-exo.active {
+  background-color: #fff;
+  color: #1a2a47;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-learning-exo {
+  background-color: #54be99;
+}
+
+.btn-learning-exo:hover {
+  background-color: #46b58e;
+}
+
+h3.emphase, ol.emphase {
+    color: #000;
+}
+
+.contenu {
+  position: absolute;
+  bottom: 10vh;
+  left: 55vw;
+  width: clamp(150px, 35vw, 380px);
+  color:#000;
+}
+
+	</style>
+</head>
+<body>
+<h2 class="ck ck-title2"><span style="color:#41479b;"><strong>Introduction</strong></span></h2>
+
+<div class="container"><img alt="Background" src="/courses/BOOSTENGLISH/document/themes/fond_1.png" class="background" />
+<div class="content"><img alt="Astronaut" src="/courses/BOOSTENGLISH/document/themes/boostaunot_1.png" class="astronaut" /> <img alt="Stars" src="/courses/BOOSTENGLISH/document/themes/stars.png" class="stars" /> <img alt="Learning Objectives" src="/courses/BOOSTENGLISH/document/themes/learning-objectives.png" class="title" /> <img alt="At the end" src="/courses/BOOSTENGLISH/document/themes/end_1.png" class="at-the-end" /> <img alt="Rocket" src="/courses/BOOSTENGLISH/document/themes/logo.png" class="rocket" />
+<div class="text-box" data-text="At the end of this brick you will be able to ask for and give directions to a nearby location. ">&nbsp;</div>
+
+<div class="contenu">
+<h3 class="emphase">CONTENT</h3>
+<p>You will:
+
+<ol class="emphase">
+	<li>watch and listen to see key vocabulary in context</li>
+	<li>practice this vocabulary using short quizzes</li>
+	<li>practice the rhythm and intonation of polite question forms</li>
+	<li>test your knowledge using a timed quiz</li>
+</ol>
+<b>TIME:</b> approx. 25 mins<br />
+<b>CEFR level:</b> A2-B1</p></div>
+<img alt="Hand icon" src="/courses/BOOSTENGLISH/document/themes/hand.png" class="hand" /> <!--img alt="Progress bar" src="/courses/BOOSTENGLISH/document/themes/progress-bar_1.png" class="progress-bar" /--></div>
+</div>
+</body>
+</html>

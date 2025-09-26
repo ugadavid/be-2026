@@ -1,0 +1,54 @@
+<div class="card" style="border:1px solid #ececec;border-radius:12px;padding:16px;max-width:600px">
+  <h3 style="margin:0 0 12px;color:#41479b">🎧 Listen and Repeat</h3>
+
+  <!-- Exemple audio -->
+  <p><strong>Example:</strong></p>
+  <audio controls style="width:100%">
+    <source src="/courses/TESTPERFORM/document/Docs-communs/Audio/example.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div style="height:1px;background:#eee;margin:14px 0"></div>
+
+  <!-- Enregistreur -->
+  <p><strong>Your turn – record yourself:</strong></p>
+  <div style="display:flex;gap:8px;margin:8px 0">
+    <button id="recStart">Start</button>
+    <button id="recStop" disabled>Stop</button>
+  </div>
+  <audio id="recPlayer" controls style="width:100%;display:none"></audio>
+  <p style="font-size:.9rem;color:#6b6b6b;margin:8px 0 0">💡 Listen to your recording and compare with the example above.</p>
+</div>
+
+<script>
+(() => {
+  const startBtn = document.getElementById('recStart');
+  const stopBtn = document.getElementById('recStop');
+  const player = document.getElementById('recPlayer');
+  let mediaRecorder, chunks = [];
+
+  async function start() {
+    chunks = [];
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.ondataavailable = e => e.data.size && chunks.push(e.data);
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(chunks, { type: mediaRecorder.mimeType || 'audio/webm' });
+        const url = URL.createObjectURL(blob);
+        player.src = url; player.style.display = 'block';
+      };
+      mediaRecorder.start();
+      startBtn.disabled = true; stopBtn.disabled = false;
+    } catch (e) {
+      alert('Microphone not available. Please allow mic access.');
+    }
+  }
+  function stop() {
+    if (mediaRecorder && mediaRecorder.state !== 'inactive') mediaRecorder.stop();
+    startBtn.disabled = false; stopBtn.disabled = true;
+  }
+  startBtn.addEventListener('click', start);
+  stopBtn.addEventListener('click', stop);
+})();
+</script>

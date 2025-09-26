@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://chamilo.grenoble-inp.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+	<title>Boost&#39;English - Way-finding</title>
+	<style type="text/css">
+        html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ==== LAYOUT ==== */
+/* container en grid, avec un calque de fond */
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+/* image de fond sous TOUT (deux colonnes) */
+.container .background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* couvre tout l’écran */
+  z-index: 0;
+  pointer-events: none;  /* clics passent au travers */
+}
+
+/* colonnes au-dessus du fond */
+.left, .right {
+  position: relative;
+  z-index: 1;
+  padding: clamp(16px, 4vw, 48px);
+}
+
+/* on enlève tout background ajouté précédemment */
+.left { overflow: hidden; }        /* décor absolu OK */
+.right { background: none; }       /* adieu l’aplat orange */
+
+/* si tu veux un trait noir au centre (comme sur le screen) */
+/*.left { border-right: 4px solid #0d243a; }*/
+
+/* décor absolu (inchangé) */
+.left img { position: absolute; max-width: 100%; height: auto; }
+.left .astronaut { bottom: 10vh; left: 15vw; width: clamp(150px, 25vw, 300px); }
+.left .stars     { top: 20vh; left: 30vw; width: clamp(20px, 5vw, 60px); }
+.left .rocket    { top: 2vh;  left: 2vw;  width: clamp(40px, 8vw, 100px); }
+
+/* pile de blocs texte (inchangé) */
+.stack { display:flex; flex-direction:column; gap:clamp(12px,2vh,20px); max-width:clamp(420px,35vw,600px); color: #000; }
+.text-block { font-size:clamp(14px,2vw,22px); line-height:1.4; font-weight:bold; }
+
+/* carte contenu (lisibilité) */
+.panel {
+  background: rgba(250,250,250,0.85);
+  border-radius: 12px;
+  padding: clamp(12px, 2vw, 20px);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* titres-image en flux normal */
+.right .title, .right .at-the-end {
+  display:block; width:clamp(200px,35vw,460px);
+  margin: 0 0 clamp(12px,2vw,24px) 0;
+}
+
+/* Plus spécifique que la règle de base */
+.right .title { width: 300px; }
+.right .at-the-end.small { width: 200px; }
+
+/* éléments bas de page (inchangé) */
+.hand { position:absolute; bottom:5vh; right:4vw; width:clamp(60px,15vw,150px); }
+.progress-bar { position:absolute; bottom:5vh; left:4vw; width:clamp(180px,35vw,380px); }
+
+
+    </style>
+</head>
+<body>
+    <h2 class="ck ck-title2"><span style="color:#41479b;"><strong>Introduction</strong></span></h2>
+
+<div class="container">
+  <img alt="Background" src="/courses/BOOSTENGLISH/document/themes/fond_1.png" class="background" />
+
+  <div class="left">
+    <img alt="Astronaut" src="/courses/BOOSTENGLISH/document/themes/boostaunot_1.png" class="astronaut" />
+    <img alt="Stars" src="/courses/BOOSTENGLISH/document/themes/stars.png" class="stars" />
+    <img alt="Rocket" src="/courses/BOOSTENGLISH/document/themes/logo.png" class="rocket" />
+  </div>
+
+  <div class="right">
+    <img alt="Learning Objectives" src="/courses/BOOSTENGLISH/document/themes/learning-objectives.png" class="title" />
+    <img alt="At the end" src="/courses/BOOSTENGLISH/document/themes/end_1.png" class="at-the-end" />
+
+    <div class="stack">
+      <div class="text-block">
+        <p>At the end of this brick you will be able to...</p>
+        <ul>
+            <li>Identify adjectives in a sentence</li>
+            <li>Tell the difference between adjectives and adverbs</li>
+            <li>Recognize and use common adjectives</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h3>CONTENT</h3>
+        <p>You will:</p>
+        <ol>
+          <li>Listen to a song and complete a short exercise.</li>
+          <li>Watch a video to learn more about adjectives.</li>
+          <li>Practice key grammar using various types of exercises.</li>
+          <li>Test your knowledge using a timed quiz </li>
+          <li>You can explore the subject further using the resources provided if you wish.</li>
+        </ol>
+        <p><b>TIME:</b> approx. 30 mins<br><b>CEFR level:</b> A2</p>
+      </div>
+    </div>
+
+    <img alt="Hand icon" src="/courses/BOOSTENGLISH/document/themes/hand.png" class="hand" />
+    <!-- <img alt="Progress bar" ... class="progress-bar" /> -->
+  </div>
+</div>
+
+
+</body>
+</html>

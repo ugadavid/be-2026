@@ -1,0 +1,18 @@
+#myBricks {
+  position: absolute;
+  top: 60px; /* ajuste selon la hauteur du header */
+  right: 20px; /* colle à droite */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 10px 15px;
+  width: 280px;
+  max-height: 400px;
+  overflow-y: auto;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 1000;
+}

@@ -1,0 +1,656 @@
+html {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 99% !important;
+    }
+
+    .row {
+        margin: 10px !important;
+        padding: 10px !important;
+        width: 90% !important;
+    }
+
+    #boostMenus{
+        position: relative;
+        z-index: 15;
+        top: 100px;
+        height: calc(100vh - 50px); /* toute la hauteur de la fenêtre - le bandeau */
+       /* overflow-y: auto; /* permet de scroller si le contenu est trop long */
+        width: 300px;
+        background-color: #243654;
+        padding: 1rem;
+        max-width: 300px;
+    }
+
+    .topic_arrow {
+        display: inline-block;
+        transition: transform 0.3s ease;
+        margin-left: 0.5em;
+    }
+
+    .topic_arrow.up {
+        transform: rotate(180deg);
+    }
+
+    .themes {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+    .themes_title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .topics {
+        margin-left: -1em;
+    }
+
+    .subtopics {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.3s ease;
+        padding: 0 0;
+    }
+
+    .subtopics.open {
+            max-height: 500px; /* suffisamment grand pour les contenus */
+            padding: 0.5em 0;
+        }
+    .subtopic_bricks {
+        display: block;
+        padding: 5px 10px;
+        color: #000000; /* noir lisible */
+        background-color: #ffffff; /* fond clair */
+        border-radius: 5px;
+        margin: 3px 0;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .theme-filters {
+        display: flex;
+        justify-content: center;
+        margin: 1em 0;
+        gap: 1em;
+        padding: 16px;
+    }
+
+    .theme-btn {
+        position: relative;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 2px 20px;
+        border-radius: 10px;
+        color: #fff;
+        background-color: #F9B233;
+        margin: 0 8px;
+        overflow: visible; /* autorise le dépassement */
+    }
+
+    .theme-btn.active {
+        background-color: white;
+        color: #000;
+    }
+    
+
+    .theme-btn .subtitle {
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-30%);
+        background-color: #eee;
+        color: #222;
+        font-size: 0.65em;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        white-space: nowrap;
+        line-height: 1.2em;
+    }
+
+    #lp-menu-cloned {
+        border: 1px solid #ccc;
+        padding: 10px;
+        max-height: 80vh;
+        overflow: auto;
+        background: white;
+    }
+
+    /* --- Boost'English Style Integré --- */
+
+/* Supprimer les marges ou paddings résiduels du haut */
+body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f6fb;
+    color: #222;
+}
+
+#content-section {
+  margin-bottom: 0 !important; /* ou 0 si tu veux coller au footer */
+}
+
+
+.topic, .subtopics, .themes {
+    background-image: none !important;
+}
+
+.titre1 {
+    color: #fff !important;
+    font-size: 14px !important;
+}
+
+
+/* Masquer le logo INP / UGA */
+#institution_logo, .headerInstitutional, .logo_container, #header-section {
+    display: none !important;
+}
+
+/* Masquer la barre grise de navigation principale */
+#main_top_navbar, .main_navbar, .navbar.navbar-default {
+    display: none !important;
+}
+
+/* Masquer le bouton view as */
+#view_as_link {
+    display: none !important;
+}
+
+/* Masquer les compteurs utilisateurs */
+#user_count, #teacher_count, .user-info, .toolTitle {
+    display: none !important;
+}
+
+/* Masquer les breadcrumbs */
+.breadcrumb, #breadcrumbs, .page-breadcrumbs {
+    display: none !important;
+}
+
+/* Masquer le logo de l'espace contenu s’il y a encore un duplicat */
+#courseTitleLogo img {
+    display: none !important;
+}
+
+.themes_title {
+  color: #ffcf59;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.topic_title {
+  background-color: #2f4d78;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  margin: 0.25rem 0;
+  cursor: pointer;
+}
+
+.topic_title:hover {
+  background-color: #4b6da3;
+}
+
+.subtopic_title,
+.brick-link {
+  background-color: #31456e;
+  color: #ddd;
+  padding: 0.35rem 0.6rem;
+  margin: 0.2rem 0;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.subtopic_title:hover,
+.brick-link:hover {
+  background-color: #4b6da3;
+  color: white;
+}
+
+
+.scorm_item_normal, .scorm_completed, .scorm_highlight {
+  background-color: #31456e;
+  color: #ddd;
+  padding: 0.35rem 0.6rem;
+  margin: 0.2rem 0;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.scorm_item_normal, .scorm_completed, .scorm_highlight :hover {
+  background-color: #4b6da3;
+  color: white;
+}
+
+.items-list {
+    font-size: 1.2rem !important;
+}
+
+.lp-subitems {
+  background-color: #31456e;
+  margin: 0.25rem 0 0.5rem 1rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #ffcf59;
+}
+
+.lp-subitems a {
+  display: block;
+  color: #ccc;
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin: 0.15rem 0;
+}
+
+.lp-subitems a:hover {
+  color: white;
+}
+
+
+.theme-btn[data-theme="Everyday communication"] {
+  background-color: #f5a623;
+  color: #1a2a47;
+}
+.theme-btn .subtitle[data-theme="Everyday communication"] {
+  background-color: #fad391;
+  color: #1a2a47;
+}
+.theme-btn[data-theme="Professional Communication"] {
+  background-color: #409dd4;
+  color: white;
+}
+.theme-btn .subtitle[data-theme="Professional Communication"] {
+  background-color: #a0ceea;
+  color: #1a2a47;
+}
+.theme-btn[data-theme="Specialist Communication"] {
+  background-color: #8b58c9;
+  color: white;
+}
+.theme-btn .subtitle[data-theme="Specialist Communication"] {
+  background-color: #c5ace4;
+  color: #1a2a47;
+}
+.theme-btn[data-theme="Learning focus"] {
+  background-color: #54be99;
+  color: white;
+}
+.theme-btn .subtitle[data-theme="Learning focus"] {
+  background-color: #aadfcc;
+  color: #1a2a47;
+  left:70%
+}
+
+.theme-btn:hover {
+  filter: brightness(1.1);
+}
+
+#boostHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999; /* toujours au-dessus */
+    background-color: #102042; /* même fond que la barre */
+    padding: 0.8em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Pour éviter que le contenu passe dessous */
+.boost_content {
+    margin-top: 100px; /* ajuste si nécessaire */
+}
+
+.site-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color:white;
+}
+
+#inlineFrameExample {
+  width: calc(100% - 300px);
+  min-height: 800px;      /* cohérent avec MIN_HEIGHT */
+  margin-top: 72px;   /* ✅ garde le même espace que ton header */
+  display: block;
+  box-sizing: border-box;
+  border: 0;
+  background: #f3f6fb;
+}
+
+
+#boostWrapper {
+    position: relative;
+    z-index: 10;
+    background-color: #f3f6fb;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#iframeMainContent {
+  position: relative;
+  z-index: 10;
+  /*background-color: yellow;*/
+  min-height: 0;     /* crucial avec flex */
+}
+
+#course_tools > .row:first-child {
+    position: relative;
+    width: 100%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    background-color: #f3f6fb;
+}
+
+#accueil {
+    position: relative;
+    width: 100%;
+    top: 20px;
+    padding-right: 0 !important;
+    padding-left: 10px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+
+
+@media (max-width: 768px) {
+  #boostHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: auto !important;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: auto !important;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: auto !important;
+    }
+}
+
+
+
+.container {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.page-course {
+    padding: 0 !important;
+}
+
+
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+ {
+    position: relative !important;
+    min-height: 1px !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Conteneur du dropdown */
+#myBricks {
+  position: fixed;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 10px 15px;
+  width: 280px;
+  max-height: 400px;
+  overflow-y: auto;
+
+  /* état caché */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  /* animation */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10001;
+}
+
+#myBricksBackdrop{
+  position: fixed;
+  inset: 0;
+  background: transparent;   /* ou rgba(0,0,0,.05) si tu veux un léger voile */
+  display: none;
+  z-index: 10000;            /* sous le panel, au-dessus du reste (et de l’iframe) */
+}
+
+/* Quand le menu est visible */
+#myBricks.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#myBricks.active + #myBricksBackdrop{
+  display: block;
+}
+
+
+
+
+
+
+
+
+/* Panneau */
+/* Conteneur: invisible par défaut */
+.be-offcanvas{ position:fixed; inset:0; display:none; z-index: 10000; }
+
+/* État ouvert – classe unique pour éviter les collisions */
+.be-offcanvas.is-open-be{ display:block; }
+
+/* Backdrop: couvre l’écran, sous le panel */
+.be-offcanvas__backdrop{
+  position:fixed; inset:0;
+  background: rgba(0,0,0,.35);
+  z-index: 1;
+  pointer-events: auto;   /* capte les clics pour fermer */
+}
+
+/* Panel: au-dessus du backdrop */
+.be-offcanvas__panel{
+  position:fixed; right:0; top:0; height:100%;
+  width:min(520px, 92vw);
+  background:#fff;
+  box-shadow:-12px 0 30px rgba(0,0,0,.25);
+  padding:16px; overflow:auto;
+  border-left:4px solid #4A90E2;
+  font-family:"Lexend",system-ui,sans-serif;
+  z-index: 2;
+}
+
+a#be-tools-btn.be-theme-btn {
+  display: inline;              /* comme les autres liens */
+  background: none;             /* pas de fond */
+  color: #F5A623;               /* ou ta couleur de thème */
+  padding: 0;                   /* pas de padding bouton */
+  border: none;                 /* pas de bordure */
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  opacity: .95;
+}
+
+a#be-tools-btn.be-theme-btn:hover {
+  text-decoration: underline;   /* comme les autres liens du footer */
+}
+
+/* (Facultatif) Bouton de fermeture  */
+.be-close{ border:0; background:#eb6628; color:#fff; padding:.45rem .7rem; border-radius:.5rem; cursor:pointer; }
+
+/* Option: masquer le bloc natif une fois déplacé */
+/*#course_tools{ display:none !important; }*/
+.title-tools{ display:none !important; }
+.course-tools-author{ display:none !important; }
+.course-tools-interaction{ display:none !important; }
+.course-tools-administration{ display:none !important; }
+.row .course-tool {   display: none !important; }
+
+/* Dans le panneau, on force l’affichage de ces blocs */
+#be-tools-host .title-tools,
+#be-tools-host .course-tools-author,
+#be-tools-host .course-tools-interaction,
+#be-tools-host .course-tools-administration,
+#be-tools-host .course-tool {
+  display:block !important;
+}
+
+/* Optionnel: grille plus lisible dans le panneau */
+#be-tools-host .course-tools-author,
+#be-tools-host .course-tools-interaction,
+#be-tools-host .course-tools-administration{
+  display:grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+
+
+
+
+#be-search-results{
+  position:absolute; top:100%; left:0; right:0; margin-top:6px;
+  background:#fff; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,.15);
+  max-height:60vh; overflow:auto; z-index:10002; padding:6px;
+  font-family:"Lexend",system-ui,sans-serif;
+}
+#be-search-results .item{ padding:8px 10px; border-radius:6px; cursor:pointer; }
+#be-search-results .item:hover, #be-search-results .item.active{ background:#f2f6ff; }
+
+
+
+footer .sub-footer .row .col-md-4:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* === Footer Boost === */
+footer {
+  background: #102042;                 /* bleu foncé BE */
+  color: #fff;
+  margin-top: 24px;
+  font-family: "Lexend", system-ui, sans-serif;
+}
+
+footer .sub-footer {
+  padding: 14px 12px;
+}
+
+footer .session-teachers,
+footer .teachers,
+footer .software-name {
+  font-size: 1.2rem;
+  line-height: 1;
+  opacity: .95;
+}
+
+/* Liens footer */
+footer a {
+  color: #F5A623;                      /* jaune/orangé BE */
+  text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+
+/* Nettoyage blocs vides si Chamilo les rend visibles */
+footer .pre-footer,
+footer .extra-footer {
+  display: none !important;
+}
+
+/* Aligner le “Powered by Chamilo ©2025” à droite sur desktop */
+@media (min-width: 768px) {
+  footer .text-right { text-align: right; }
+}
+
+
+
+
+/* ===== Didacticiel BE ===== */
+.be-guide { 
+  background:#fff; border:1px solid #e6e6e6; border-radius:12px; padding:14px; box-shadow:0 6px 20px rgba(0,0,0,.06); 
+  font-family:"Lexend",system-ui,sans-serif; 
+  max-width: 1000px;       /* largeur max (plus petit que l’écran) */
+  height: auto;
+  margin: 0 auto;          /* centrer horizontalement */
+  text-align: left;      /* tout centrer */
+}
+.be-guide__viewport { position:relative; }
+.be-slide { display:none; }
+.be-slide.is-active { display:block; animation: beFade .2s ease; }
+@keyframes beFade { from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:none} }
+
+.be-cols { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+.be-col h3 { margin:0 0 6px; color:#263c6e; }
+.be-col h3:not(:first-child) {
+  margin-top: 20px; /* ajoute du haut uniquement à partir du 2e */
+}
+.be-col p { margin:0; margin-top: 20px; line-height:1.5; font-size:1.5rem; }
+.be-col p.align-right {
+  text-align: right;
+}
+
+.be-fr h3 { color:#263c6e; }
+.be-en h3 { color:#eb6628; }
+
+.be-guide__controls { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; }
+.be-nav { background:#263c6e; color:#fff; border:0; border-radius:10px; padding:6px 10px; cursor:pointer; font-weight:700; margin-top: 20px;}
+.be-nav:hover{ background:#2f4b8a; }
+.be-dots { display:flex; gap:6px; align-items:center; }
+.be-dot { width:10px; height:10px; border-radius:50%; background:#d0d6e2; border:0; cursor:pointer; }
+.be-dot[aria-selected="true"] { background:#4A90E2; }
+
+.be-illustration {margin:0 auto; margin-top: 50px;}
+.be-illustration img {
+    display: block;
+    margin: 12px auto 0 auto; /* haut auto bas auto → centré */
+    box-shadow: 3px 3px 1px #ccc;
+}
+
+/* Responsive : une colonne sur mobile */
+@media (max-width: 720px){
+  .be-cols { grid-template-columns: 1fr; }
+}
+
+
+/* Tous les conteneurs au-dessus de l’iframe dans la colonne droite */
+.page-course .row,
+.page-course .col-md-12,
+#boostWrapper,
+#iframeMainContent,
+.right_block{
+  min-height: 0 !important;  /* crucial avec flex */
+}

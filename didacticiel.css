@@ -1,0 +1,25 @@
+/* ===== Didacticiel BE ===== */
+.be-guide { background:#fff; border:1px solid #e6e6e6; border-radius:12px; padding:14px; box-shadow:0 6px 20px rgba(0,0,0,.06); font-family:"Lexend",system-ui,sans-serif; }
+.be-guide__viewport { position:relative; }
+.be-slide { display:none; }
+.be-slide.is-active { display:block; animation: beFade .2s ease; }
+@keyframes beFade { from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:none} }
+
+.be-cols { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+.be-col h3 { margin:0 0 6px; color:#263c6e; }
+.be-col p { margin:0; line-height:1.5; font-size:0.98rem; }
+
+.be-fr h3 { color:#263c6e; }
+.be-en h3 { color:#eb6628; }
+
+.be-guide__controls { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; }
+.be-nav { background:#263c6e; color:#fff; border:0; border-radius:10px; padding:6px 10px; cursor:pointer; font-weight:700; }
+.be-nav:hover{ background:#2f4b8a; }
+.be-dots { display:flex; gap:6px; align-items:center; }
+.be-dot { width:10px; height:10px; border-radius:50%; background:#d0d6e2; border:0; cursor:pointer; }
+.be-dot[aria-selected="true"] { background:#4A90E2; }
+
+/* Responsive : une colonne sur mobile */
+@media (max-width: 720px){
+  .be-cols { grid-template-columns: 1fr; }
+}

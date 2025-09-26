@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://echamilo.univ-grenoble-alpes.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/courses/BOOSTENGLISH/document/bbe/be-intro-style.css" media="screen" rel="stylesheet" type="text/css" />
+	<title>Boost&#39;English - Becoming a Boostonaut: the mission begins</title>
+	<style type="text/css">
+        .be-tour{ max-width: 1100px; margin: 1.25rem auto 2rem; }
+.be-tour-frame{
+  background:#102042; border-radius:16px; padding:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.15);
+}
+.be-slide{ display:none; gap:18px; align-items:stretch; }
+.be-slide.is-active{ display:flex; }
+.be-shot{ position:relative; flex: 0 0 56%; background:#0b1a35; border-radius:12px; overflow:hidden; }
+.be-shot img{ width:100%; height:100%; object-fit:cover; display:block; }
+.be-zoom{
+  position:absolute; inset:auto 10px 10px auto; border:0; border-radius:10px;
+  padding:.45rem .6rem; background:#50c398; color:#0b2a26; font-weight:600; cursor:pointer;
+}
+.be-copy{
+  flex:1; background:#50c398; color:#0b2a26; border-radius:12px; padding:16px 18px;
+  display:flex; flex-direction:column; gap:.4rem;
+}
+.be-copy h3{ margin:.2rem 0 .4rem; font-size:1.25rem; }
+.be-copy ul{ margin:.2rem 0 0 1rem; }
+.be-copy li{ margin:.25rem 0; }
+
+.be-controls{
+  margin-top:12px; display:flex; align-items:center; justify-content:center; gap:14px;
+}
+.be-prev,.be-next{
+  border:0; border-radius:10px; padding:.5rem .8rem;
+  background:#50c398; color:#0b2a26; font-weight:700; cursor:pointer;
+}
+.be-step{ color:#fff; font-weight:600; letter-spacing:.5px; }
+
+@media (max-width: 900px){
+  .be-slide{ flex-direction:column; }
+  .be-shot{ flex-basis:auto; height:38vh; }
+}
+
+/* Lightbox */
+.be-lightbox{ border:none; padding:0; background:transparent; }
+.be-lightbox::backdrop{ background:rgba(0,0,0,.6); }
+.be-lightbox img{ max-width:90vw; max-height:85vh; border-radius:12px; display:block; }
+.be-close{
+  position:absolute; top:10px; right:10px; border:0; border-radius:999px;
+  padding:.4rem .6rem; background:#50c398; color:#0b2a26; font-weight:700; cursor:pointer;
+}
+
+	</style>
+</head>
+<body>
+<h2 class="ck ck-title2"><span style="color:#41479b;"><strong>🚀 Quick presentation of Boost'English</strong></span></h2>
+
+
+<!-- MINI TOUR -->
+<section class="be-tour" aria-label="Boost'English mini tour">
+  <div class="be-tour-frame">
+    <!-- Slide 1 -->
+    <article class="be-slide is-active">
+      <div class="be-shot">
+        <img src="/courses/BOOSTENGLISH/document/commun/learning/boostonaut/BE_home.png" alt="Boost'English homepage" />
+        <button class="be-zoom" aria-label="Open image">🔎</button>
+      </div>
+      <div class="be-copy">
+        <h3>Welcome to Boost'English</h3>
+        <ul>
+          <li>Boost'English is an e-learning platform that is designed to be used either as in-class or self-study material.</li>
+          <li>The material is organised into four main themes. The menus can be found at the top of each page - Everyday Communication, Specialist Communication, Professional Communication and Learning Focus.</li>
+          <li>Each theme is organised into a number of learning paths known as “bricks”, which can be completed in any order, according to your needs, your interests or the requirements of your class teacher.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Slide 2 -->
+    <article class="be-slide">
+      <div class="be-shot">
+        <img src="/courses/BOOSTENGLISH/document/commun/learning/boostonaut/BE_menu_families.png" alt="Families and bricks menu" />
+        <button class="be-zoom" aria-label="Open image">🔎</button>
+      </div>
+      <div class="be-copy">
+        <h3>Where to find things?</h3>
+        <ul>
+          <li>Choose a <strong>family</strong> (Everyday / Professional / Specialist / Learning Focus).</li>
+          <li>Open a <strong>brick</strong> (a small module).</li>
+          <li>Inside a brick: <em>Introduction</em>, <em>I start</em>, <em>I learn</em> ... <em>I want more</em></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Slide 3 -->
+    <article class="be-slide">
+      <div class="be-shot">
+        <img src="/courses/BOOSTENGLISH/document/commun/learning/boostonaut/BE_activity_types.png" alt="Examples of H5P, LearningApps, Canva, Padlet" />
+        <button class="be-zoom" aria-label="Open image">🔎</button>
+      </div>
+      <div class="be-copy">
+        <h3>Types of activities</h3>
+        <ul>
+          <li><strong>H5P</strong>: interactive quizzes, drag &amp; drop, video with questions.</li>
+          <li><strong>LearningApps</strong>: matching, ordering, gap-fill.</li>
+          <li><strong>Canva</strong>: posters or simple slides.</li>
+          <li><strong>Padlet / Drive</strong>: share and comment.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Slide 4 -->
+    <article class="be-slide">
+      <div class="be-shot">
+        <img src="/courses/BOOSTENGLISH/document/commun/learning/boostonaut/BE_inside_brick.png" alt="Inside a brick: intro, tasks, feedback" />
+        <button class="be-zoom" aria-label="Open image">🔎</button>
+      </div>
+      <div class="be-copy">
+        <h3>How to work</h3>
+        <ul>
+          <li><strong>In class:</strong>
+            <ul>
+              <li>Follow the teacher's instructions</li>
+              <li>Work individually, in pairs or small groups</li>
+            </ul>
+          </li>
+          <li><strong>At home:</strong>
+            <ul>
+              <li>Complete the bricks assigned by your teacher</li>
+              <li>Feel free to explore other bricks that interest you</li>
+            </ul>
+          </li>
+          <li><strong>Your ideas matter!</strong>
+            <ul>
+              <li>You are welcome to suggest new brick topics or activities</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Slide 5 -->
+    <article class="be-slide">
+      <div class="be-shot">
+        <img src="/courses/BOOSTENGLISH/document/commun/learning/boostonaut/BE_explore.png" alt="Explore bricks" />
+        <button class="be-zoom" aria-label="Open image">🔎</button>
+      </div>
+      <div class="be-copy">
+        <h3>Your turn</h3>
+        <ul>
+          <li>Explore <strong>2-3 bricks</strong> now.</li>
+          <li>Pick <strong>one thing you liked / unliked</strong> and <strong>one question</strong>.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Controls -->
+    <div class="be-controls">
+      <button class="be-prev" aria-label="Previous slide">◀</button>
+      <div class="be-step"><span class="be-current">1</span>/5</div>
+      <button class="be-next" aria-label="Next slide">▶</button>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <dialog class="be-lightbox" aria-label="Screenshot preview">
+    <img alt="" />
+    <form method="dialog"><button class="be-close" aria-label="Close">✕</button></form>
+  </dialog>
+</section>
+
+
+
+<script>
+(() => {
+  const slides = [...document.querySelectorAll('.be-slide')];
+  const prev = document.querySelector('.be-prev');
+  const next = document.querySelector('.be-next');
+  const step = document.querySelector('.be-current');
+  const lightbox = document.querySelector('.be-lightbox');
+  const lbImg = lightbox?.querySelector('img');
+
+  let i = 0;
+  const show = (n) => {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle('is-active', k === i));
+    step.textContent = String(i + 1);
+  };
+  prev.addEventListener('click', () => show(i - 1));
+  next.addEventListener('click', () => show(i + 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') show(i - 1);
+    if (e.key === 'ArrowRight') show(i + 1);
+  });
+  show(0);
+
+  document.querySelectorAll('.be-zoom').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const img = e.currentTarget.closest('.be-shot').querySelector('img');
+      lbImg.src = img.src; lbImg.alt = img.alt || '';
+      lightbox.showModal();
+    });
+  });
+})();
+</script>
+
+
+
+</body>
+</html>

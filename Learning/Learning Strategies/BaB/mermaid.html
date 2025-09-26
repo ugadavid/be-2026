@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Mermaid -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "base",
+    themeVariables: { fontFamily: "Lexend, Montserrat, Arial, sans-serif", fontSize: "20px" },
+    flowchart: { useMaxWidth: false, htmlLabels: true, curve: "linear", nodeSpacing: 40, rankSpacing: 50 }
+  });
+</script>
+
+<style>
+  /* 1 colonne = lisibilité max. Passe à 2 colonnes si tu veux (repeat(2,1fr)) */
+  .be-stack { 
+  display:grid; 
+  grid-template-columns: repeat(2, 1fr);  /* <-- 2 colonnes */
+  gap: 28px; 
+}
+  .be-stack .mermaid svg { width: 100% !important; height: auto !important; }
+</style>
+
+<div class="be-stack">
+
+  <!-- Everyday communication (chaînes verticales) -->
+  <div class="mermaid">
+flowchart TB
+  classDef EC fill:#f5a623,color:#000,stroke:#d98d00,stroke-width:2px,rx:16,ry:16;
+  classDef TAG fill:#ffffff,color:#333,stroke:#ccc,stroke-width:1px,rx:10,ry:10;
+
+  EC[Everyday communication]:::EC
+
+  EC --> N[Numbers]
+  N --> N1([Numbers]):::TAG --> N2([Telling the time]):::TAG
+
+  EC --> WF[Way Finding]
+  WF --> WF1([Way finding 1]):::TAG --> WF2([Way finding 2]):::TAG
+
+  EC --> C[Conversations]
+  C --> C1([Greetings]):::TAG --> C2([Question words]):::TAG --> C3([Basic questions]):::TAG --> C4([Socialising / Small talk]):::TAG
+
+  EC --> PI[Personal Information]
+  PI --> PI1([Hobbies]):::TAG --> PI2([Personality]):::TAG --> PI3([Filling in a form]):::TAG
+  </div>
+
+  <!-- Professional Communication (chaînes verticales) -->
+  <div class="mermaid">
+flowchart TB
+  classDef PC fill:#409dd4,color:#fff,stroke:#2f7fac,stroke-width:2px,rx:16,ry:16;
+  classDef TAG fill:#ffffff,color:#333,stroke:#ccc,stroke-width:1px,rx:10,ry:10;
+
+  PC[Professional Communication]:::PC
+
+  PC --> JH[Job hunting]
+  JH --> JH1([CV]):::TAG --> JH2([Cover letters]):::TAG
+
+  PC --> PR[Presentations]
+  PR --> PR1([Structuring a presentation]):::TAG --> PR2([Interaction]):::TAG --> PR3([Body language]):::TAG
+
+  PC --> EM[Emailing]
+  EM --> EM1([Emailing]):::TAG
+
+  PC --> ES[Essays]
+  ES --> ES1([Paragraphing]):::TAG
+  </div>
+
+  <!-- Specialist Communication (chaînes verticales) -->
+  <div class="mermaid">
+flowchart TB
+  classDef SC fill:#8b58c9,color:#fff,stroke:#6a3fa0,stroke-width:2px,rx:16,ry:16;
+  classDef TAG fill:#ffffff,color:#333,stroke:#ccc,stroke-width:1px,rx:10,ry:10;
+
+  SC[Specialist Communication]:::SC
+
+  SC --> SV[Scientific vocabulary]
+  SV --> SV1([Everyday Science: In the lab]):::TAG --> SV2([Biomedical Engineering]):::TAG --> SV3([Physics & Materials Science]):::TAG --> SV4([Basic I.T. vocabulary]):::TAG --> SV5([Green Engineering]):::TAG --> SV6([Electronics & Embedded Systems]):::TAG
+
+  SC --> OD[Object / Device description]
+  OD --> OD1([Shapes]):::TAG --> OD2([Object description]):::TAG --> OD3([Object specifications]):::TAG --> OD4([Position and movement]):::TAG --> OD5([Object function]):::TAG
+
+  SC --> DD[Data and descriptions]
+  DD --> DD1([Comparison]):::TAG --> DD2([Graphs, data and trends]):::TAG
+  </div>
+
+  <!-- Learning focus (chaînes verticales) -->
+  <div class="mermaid">
+flowchart TB
+  classDef LF fill:#54be99,color:#000,stroke:#3a9e80,stroke-width:2px,rx:16,ry:16;
+  classDef TAG fill:#ffffff,color:#333,stroke:#ccc,stroke-width:1px,rx:10,ry:10;
+
+  LF[Learning focus]:::LF
+
+  LF --> LST[Listening]
+  LST --> LST1([Listening comprehension]):::TAG
+
+  LF --> VW[Voice work]
+  VW --> VW1([Word stress 1]):::TAG --> VW2([Word stress 2]):::TAG --> VW3([Sentence stress]):::TAG --> VW4([Pronouncing -ed]):::TAG --> VW5([Pronouncing TH]):::TAG --> VW6([Pronouncing H]):::TAG --> VW7([Tiny differences]):::TAG
+
+  LF --> GR[Grammar]
+  GR --> GR1([Conditional Sentences]):::TAG --> GR2([Future tenses 1]):::TAG --> GR3([Future tenses 2]):::TAG
+
+  LF --> LS[Learning strategies]
+  LS --> LS1([Thinking in English]):::TAG --> LS2([Memorizing vocabulary]):::TAG --> LS3([Shower conversations]):::TAG
+
+  LF --> CU[Culture]
+  CU --> CU1([Sport]):::TAG --> CU2([Cinema]):::TAG --> CU3([Series]):::TAG
+  </div>
+
+</div>
+
+</body>
+</html>

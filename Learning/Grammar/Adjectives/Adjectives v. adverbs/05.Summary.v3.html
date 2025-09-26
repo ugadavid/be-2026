@@ -1,0 +1,167 @@
+<html>
+<head>
+  <title>Summary – Word Classes</title>
+  <link href="https://echamilo.univ-grenoble-alpes.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+  <style>
+    :root{
+      --be-blue:#41479b;
+      --be-orange:#f5a623;
+      --be-dark:#353535;
+      --be-text:#444545;
+      --be-bg:#f7f7f7;
+      --be-card:#fff;
+      --radius:12px;
+    }
+    body{color:var(--be-text);font-size:18px;line-height:1.45;}
+    h1{color:var(--be-blue);font-size:30px;font-weight:700;display:flex;align-items:center;gap:10px;margin:0 0 12px;}
+    h2{color:var(--be-blue);font-size:22px;margin:0 0 8px;}
+    .page{max-width:900px;margin:0;padding:20px;} /* aligné à gauche */
+    .tabs{
+      display:inline-flex; gap:6px; background:var(--be-bg);
+      border-radius:999px; padding:4px; margin:6px 0 14px;
+    }
+    .tab{
+      border:0; background:transparent; padding:8px 14px; border-radius:999px;
+      font-weight:700; color:var(--be-dark); cursor:pointer;
+    }
+    .tab[aria-selected="true"]{ background:var(--be-orange); color:#fff; }
+    .card{
+      background:var(--be-card); border:1px solid #ececec; border-radius:var(--radius);
+      padding:20px; box-shadow:0 1px 2px rgba(0,0,0,.05); margin-bottom:20px;
+    }
+    .note{
+      background:var(--be-bg); padding:12px 16px; border-left:4px solid var(--be-orange);
+      border-radius:var(--radius); margin:16px 0;
+    }
+    ul{margin:10px 0 0 20px; padding:0;}
+    li{margin:6px 0;}
+    em{color:var(--be-dark);}
+    /* Progressive enhancement: on masque via [hidden], donc si JS off → les deux blocs restent visibles */
+    [hidden]{display:none !important;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>
+      <span>Summary</span>
+      <img alt="" height="47" src="/courses/TESTPERFORM/document/Docs-communs/Icones/keywords.png" width="50" />
+    </h1>
+
+    <!-- TABS -->
+    <div class="tabs" role="tablist" aria-label="Language">
+      <button class="tab" role="tab" id="tab-en" aria-controls="panel-en" aria-selected="true">English 🇬🇧</button>
+      <button class="tab" role="tab" id="tab-fr" aria-controls="panel-fr" aria-selected="false">Français 🇫🇷</button>
+    </div>
+
+    <!-- PANEL EN -->
+    <section id="panel-en" role="tabpanel" aria-labelledby="tab-en">
+      <div class="card">
+        <div class="note">There are 4 major word classes in English: <strong>nouns, adjectives, verbs and adverbs</strong>.</div>
+
+        <h2>Adjectives</h2>
+        <p>Adjectives give us more information about <strong>nouns</strong> (people, animals or things).</p>
+        <ul><li>William is a very <strong>serious</strong> (adjective) boy (noun).</li></ul>
+
+        <h2>Adverbs</h2>
+        <p>Adverbs give us more information about <strong>verbs</strong> (actions).</p>
+        <ul><li>She <strong>plays</strong> (verb) the flute very <strong>well</strong> (adverb).</li></ul>
+
+        <div class="note">
+          ⚠️ Most adverbs end in <em>-ly</em> (<em>slowly, badly, terribly</em>), but <u><strong>not</strong></u> all words ending in <em>-ly</em> are adverbs
+          (for example, <em>friendly, lovely, silly</em> are adjectives).
+        </div>
+
+        <h2>Stative verbs + adjective</h2>
+        <p>The following verbs <u>can</u> be followed by adjectives:
+          <em>seem, appear, look, feel, taste, smell, sound, become, grow, get, go, turn</em>.
+        </p>
+        <ul>
+          <li>She appeared quite <strong>confident</strong>.</li>
+          <li>He seemed quite <strong>happy</strong>.</li>
+          <li>The food tasted <strong>horrible</strong>.</li>
+        </ul>
+
+        <div class="note"><em>[These verbs will be covered in more detail in a separate brick.]</em></div>
+      </div>
+    </section>
+
+    <!-- PANEL FR -->
+    <section id="panel-fr" role="tabpanel" aria-labelledby="tab-fr" hidden>
+      <div class="card">
+        <div class="note">
+          Il existe <strong>quatre grandes catégories de mots</strong> en anglais :
+          <strong>noms, adjectifs, verbes</strong> et <strong>adverbes</strong>.
+        </div>
+
+        <h2>Adjectifs</h2>
+        <p>Les adjectifs donnent plus d’informations sur les noms (personnes, animaux, choses).</p>
+        <ul><li>William est un garçon <strong>très sérieux</strong>.</li></ul>
+
+        <h2>Adverbes</h2>
+        <p>Les adverbes donnent plus d’informations sur les verbes (actions).</p>
+        <ul><li>Elle joue <strong>très bien</strong> de la flûte.</li></ul>
+
+        <div class="note">
+          ⚠️ La plupart des adverbes en anglais se terminent par <em>-ly</em> (<em>slowly, badly, terribly</em>),
+          mais tous les mots finissant par <em>-ly</em> ne sont pas des adverbes :
+          <em>friendly</em> (amical), <em>lovely</em> (adorable), <em>silly</em> (stupide) → des adjectifs.
+        </div>
+
+        <h2>Verbes + adjectif</h2>
+        <p>Les verbes suivants peuvent être suivis d’un adjectif :
+          <em>seem, appear, look, feel, taste, smell, sound, become, grow, get, go, turn</em>.
+        </p>
+        <ul>
+          <li>Elle parut assez <strong>confiante</strong>.</li>
+          <li>Il sembla assez <strong>heureux</strong>.</li>
+          <li>La nourriture avait un goût <strong>horrible</strong>.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (function(){
+      const tabs = document.querySelectorAll('.tab');
+      const panels = {
+        en: document.getElementById('panel-en'),
+        fr: document.getElementById('panel-fr')
+      };
+
+      // Restore preferred language
+      const key = 'be-lang';
+      const saved = localStorage.getItem(key);
+      if(saved && panels[saved]){
+        setLang(saved);
+      }
+
+      tabs.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const id = btn.id === 'tab-en' ? 'en' : 'fr';
+          setLang(id);
+        });
+        // Accessibilité clavier (Left/Right)
+        btn.addEventListener('keydown', (e)=>{
+          if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+            e.preventDefault();
+            const next = btn.id === 'tab-en' ? document.getElementById('tab-fr')
+                                             : document.getElementById('tab-en');
+            next.focus(); next.click();
+          }
+        });
+      });
+
+      function setLang(lang){
+        // tabs state
+        document.getElementById('tab-en').setAttribute('aria-selected', lang==='en');
+        document.getElementById('tab-fr').setAttribute('aria-selected', lang==='fr');
+        // panels
+        panels.en.hidden = (lang !== 'en');
+        panels.fr.hidden = (lang !== 'fr');
+        // remember
+        localStorage.setItem(key, lang);
+      }
+    })();
+  </script>
+</body>
+</html>

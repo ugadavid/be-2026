@@ -1,0 +1,211 @@
+<!-- BE Vocabulary – Directions (clean, semantic, no <br>) -->
+<html>
+<head>
+  <link href="https://echamilo.univ-grenoble-alpes.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+  <title>Vocabulary – Directions</title>
+  <style>
+    :root{
+      --be-blue:#41479b;
+      --be-orange:#f5a623;
+      --be-dark:#353535;
+      --be-text:#444545;
+      --be-muted:#6b6b6b;
+      --be-bg:#f7f7f7;
+      --be-card:#ffffff;
+      --radius:12px;
+      --gap:16px;
+    }
+    body{color:var(--be-text); font-size:18px; line-height:1.45;}
+    h1,h2,h3{margin:0 0 12px;}
+    h1{color:var(--be-blue); font-size:30px; font-weight:700; display:flex; align-items:center; gap:10px;}
+    h2{color:var(--be-blue); font-size:22px; font-weight:700;}
+    .page { margin-inline: 0; }
+    .card{background:var(--be-card); border:1px solid #ececec; border-radius:var(--radius); padding:20px; box-shadow:0 1px 2px rgba(0,0,0,.03); margin-bottom:18px;}
+    .subgrid{display:grid; gap:var(--gap);}
+    .subgrid.cols-2{grid-template-columns:1fr 1fr;}
+    @media (max-width:720px){ .subgrid.cols-2{grid-template-columns:1fr;} }
+
+    /* Lists */
+    ul{margin:10px 0 0 20px; padding:0;}
+    li{margin:6px 0;}
+    .hint{color:var(--be-muted); font-size:.95rem; margin-top:8px;}
+
+    /* Anchors / links */
+    a{color:var(--be-orange); text-decoration:none; font-weight:700;}
+    a:hover{text-decoration:underline;}
+
+    /* Video wrapper (responsive, capped at 560×315) */
+    .video{   position: relative;   width: 100%;   max-width: 560px;      /* = 560px sur grand écran */ 
+    aspect-ratio: 16 / 9;  /* = 315px de haut pour 560px de large */
+    overflow: hidden;   border-radius: 10px;   background: #000;
+    }
+    .video iframe{     position: absolute;     inset: 0;     width: 100%;     height: 100%;     border: 0;     }
+
+
+    /* Bilingual terms (semantic definition list) */
+    .terms{display:grid; grid-template-columns:1fr 1fr; gap:10px 20px; align-items:start; margin-top:10px;}
+    .terms dt{font-weight:600; color:var(--be-dark);}
+    .terms dd{margin:0; color:var(--be-text);}
+    @media (max-width:720px){ .terms{grid-template-columns:1fr;} }
+
+    /* Section header line */
+    .section-head{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px;}
+    .badge{background:var(--be-bg); color:var(--be-dark); font-size:.9rem; padding:4px 8px; border-radius:999px;}
+    .anchor{font-size:.9rem;}
+
+    /* subtle separators */
+    .sep{height:1px; background:#eee; margin:10px 0;}
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <h1 id="en">
+      <span>Vocabulary</span>
+      <img alt="" height="40" src="/courses/TESTPERFORM/document/Docs-communs/Icones/keywords.png" width="43" />
+    </h1>
+
+    <!-- SECTION 1 -->
+    <div class="card">
+      <div class="section-head">
+        <h2>1) Instructions with common verbs and prepositions</h2>
+        <a class="anchor" href="#fr">🇫🇷 Voir les traductions</a>
+      </div>
+
+      <div class="subgrid cols-2">
+        <div>
+          <h3>Left</h3>
+          <ul>
+            <li>Go left.</li>
+            <li>Turn left.</li>
+            <li>Take a left.</li>
+            <li>Take the second (turning) on the left.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Right</h3>
+          <ul>
+            <li>Go right.</li>
+            <li>Turn right.</li>
+            <li>Take a right.</li>
+            <li>Take the second (turning) on the right.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div>
+        <h3>Movement / Path</h3>
+        <ul>
+          <li>Go up / go down (the street / the road / the avenue)</li>
+          <li>Go straight ahead / go straight on / go along (the street)</li>
+          <li>Go over (the bridge)</li>
+          <li>Go through (the park)</li>
+          <li>Cross (the street)</li>
+          <li>Go (a)round the roundabout</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="card">
+      <div class="section-head">
+        <h2>2) Transition words</h2>
+        <span class="badge">Use them to chain instructions</span>
+      </div>
+      <ul>
+        <li><strong>Then</strong>, …</li>
+        <li><strong>Next</strong>, …</li>
+        <li><strong>After that</strong>, …</li>
+        <li><strong>When you get to</strong> …</li>
+        <li><strong>Finally</strong>, …</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="card">
+      <div class="section-head">
+        <h2>3) Prepositions of location</h2>
+        <a class="anchor" href="#video">🎬 Watch a quick demo</a>
+      </div>
+      <ul>
+        <li>Next to / beside</li>
+        <li>Between</li>
+        <li>Opposite / across from</li>
+        <li>In front of</li>
+        <li>Behind</li>
+        <li>On the corner of</li>
+        <li>On the left / right</li>
+      </ul>
+
+      <p id="video" class="hint">
+        To see these prepositions in action, watch the short clip below (from <strong>2:33</strong> to <strong>3:07</strong>).
+      </p>
+      <div class="video" aria-label="Prepositions of location – video excerpt">
+        <iframe 
+          src="https://www.youtube.com/embed/IDEuyJwOiyA?start=154&end=187"
+          title="Prepositions of Location – excerpt 2:33–3:07"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <p class="hint">
+      Need the French translations? <a href="#fr">Click here</a>.
+    </p>
+
+    <!-- FRENCH TRANSLATIONS -->
+    <h1 id="fr">Traductions (French)</h1>
+
+    <div class="card">
+      <h2>1) Instructions with Common Verbs and Prepositions</h2>
+      <dl class="terms">
+        <dt>Go left.</dt><dd>Allez à gauche.</dd>
+        <dt>Turn left.</dt><dd>Tournez à gauche.</dd>
+        <dt>Take a left.</dt><dd>Prenez à gauche.</dd>
+        <dt>Take the second (turning) on the left.</dt><dd>Prenez la deuxième à gauche.</dd>
+
+        <dt>Go right.</dt><dd>Allez à droite.</dd>
+        <dt>Turn right.</dt><dd>Tournez à droite.</dd>
+        <dt>Take a right.</dt><dd>Prenez à droite.</dd>
+        <dt>Take the second (turning) on the right.</dt><dd>Prenez la deuxième à droite.</dd>
+
+        <dt>Go up / go down (the street / road / avenue)</dt><dd>Montez / Descendez (la rue / la route / l’avenue).</dd>
+        <dt>Go straight ahead / on / go along (the street)</dt><dd>Allez tout droit / Continuez tout droit / Suivez (la rue).</dd>
+        <dt>Go over (the bridge)</dt><dd>Traversez (le pont).</dd>
+        <dt>Go through (the park)</dt><dd>Passez par (le parc) / Traversez (le parc).</dd>
+        <dt>Cross (the street)</dt><dd>Traversez (la rue).</dd>
+        <dt>Go (a)round the roundabout</dt><dd>Faites le tour du rond-point.</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <h2>2) Transition Words</h2>
+      <dl class="terms">
+        <dt>Then, …</dt><dd>Puis, … / Ensuite, …</dd>
+        <dt>Next, …</dt><dd>Ensuite, … / Après, …</dd>
+        <dt>After that …</dt><dd>Après cela, …</dd>
+        <dt>When you get to …</dt><dd>Quand vous arrivez à …</dd>
+        <dt>Finally, …</dt><dd>Enfin, … / Finalement, …</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <h2>3) Prepositions of Location</h2>
+      <dl class="terms">
+        <dt>Next to / beside</dt><dd>À côté de</dd>
+        <dt>Between</dt><dd>Entre</dd>
+        <dt>Opposite / across from</dt><dd>En face de</dd>
+        <dt>In front of</dt><dd>Devant</dd>
+        <dt>Behind</dt><dd>Derrière</dd>
+        <dt>On the corner of</dt><dd>Au coin de</dd>
+        <dt>On the left / right</dt><dd>À gauche / À droite</dd>
+      </dl>
+    </div>
+
+    <p class="hint">Get back to English only, <a href="#en">click here</a>.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>I want more</title>
+	<link href="https://echamilo.univ-grenoble-alpes.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+	<style type="text/css">:root{
+      --be-blue:#41479b; --be-orange:#f5a623; --be-dark:#353535; --be-text:#444545;
+      --be-bg:#f7f7f7; --be-card:#fff; --radius:12px; --gap:16px;
+    }
+    body{color:var(--be-text);font-size:18px;line-height:1.45;}
+    h1,h2{margin:0 0 12px;}
+    h1{color:var(--be-blue);font-size:30px;font-weight:700;}
+    h2{color:var(--be-blue);font-size:20px;}
+    .page{padding:20px;margin-inline:0;}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);}
+    @media (max-width:900px){.grid{grid-template-columns:1fr;}}
+    .card{
+      background:var(--be-card); border:1px solid #ececec; border-radius:var(--radius);
+      padding:18px; box-shadow:0 1px 2px rgba(0,0,0,.05);
+    }
+    .badge{display:inline-block;background:var(--be-bg);color:var(--be-dark);
+      border-radius:999px;padding:4px 10px;font-size:.9rem;margin-left:8px;}
+    .note{
+      background:var(--be-bg); padding:12px 16px; border-left:4px solid var(--be-orange);
+      border-radius:var(--radius); margin:12px 0 0;
+    }
+    .video{position:relative;width:100%;max-width:560px;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#000;}
+    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+    a{color:var(--be-orange);font-weight:700;text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .btn-be{display:inline-block;background:#f2f2f2;color:var(--be-orange);
+      padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:700;}
+    .btn-be:hover{background:#e3e3e3;}
+	</style>
+</head>
+<body>
+<div class="page">
+<h1>I want more</h1>
+
+<p class="alert alert-info">Watch the complete videos seen in this brick.</p>
+
+<div class="grid"><!-- 1) Adjectives and adverbs (Video) -->
+<div class="card">
+<h2>AMES836, <em>Asking for and giving directions: English Language</em> <span class="badge">Video</span></h2>
+
+<div aria-label="Asking for and giving directions – video" class="video">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" 
+    src="https://www.youtube.com/embed/-_YoeEY8FPM?start=0" title="Asking for and giving directions"></iframe></div>
+</div>
+
+
+<!-- 3) Adjective Order (Video) -->
+
+<div class="card">
+<h2>English with Teacher Zazelis,<em> Asking and Giving Locations and Directions in English</em> <span class="badge">Video</span></h2>
+
+<div aria-label="Asking and Giving Locations – video" class="video">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" 
+    src="https://www.youtube.com/embed/IDEuyJwOiyA?start=0" title="Asking and Giving Locations"></iframe></div>
+</div>
+<!-- 5) English at work: Speak like a manager (Video) -->
+
+<div class="card">
+<h2>Mad English TV, <em>Asking for directions in English &ndash; are you afraid?</em> <span class="badge">Video</span></h2>
+
+<div aria-label="Asking for directions" class="video">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" 
+    src="https://www.youtube.com/embed/P9lI9ItOZWY?start=0" title="Asking for directions"></iframe></div>
+</div>
+</div>
+<p>This video goes through the whole process of asking for and understanding directions, including how to get attention politely.</p>
+</div>
+</body>
+</html>

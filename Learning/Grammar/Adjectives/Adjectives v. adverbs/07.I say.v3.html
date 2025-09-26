@@ -1,0 +1,150 @@
+<html>
+<head>
+  <title>Step 6 – I say</title>
+  <link href="https://echamilo.univ-grenoble-alpes.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+  <style>
+    :root{
+      --be-blue:#41479b;
+      --be-orange:#f5a623;
+      --be-dark:#353535;
+      --be-text:#444545;
+      --be-bg:#f7f7f7;
+      --be-card:#fff;
+      --radius:12px;
+    }
+    body{color:var(--be-text);font-size:18px;line-height:1.45;}
+    h1{color:var(--be-blue);font-size:30px;font-weight:700;display:flex;align-items:center;gap:10px;margin:0 0 12px;}
+    h2{color:var(--be-blue);font-size:22px;margin:0 0 12px;}
+    .page{margin-inline:0;padding:20px;}
+    .card{background:var(--be-card);border:1px solid #ececec;border-radius:var(--radius);padding:20px;box-shadow:0 1px 2px rgba(0,0,0,.05);margin-bottom:20px;}
+    .note{background:var(--be-bg);padding:12px 16px;border-left:4px solid var(--be-orange);border-radius:var(--radius);margin:16px 0;}
+    .phrase{margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid #eee;}
+    .phrase:last-child{border-bottom:0;}
+    .actions{display:flex;gap:8px;margin:8px 0;}
+    audio{width:100%; max-width:400px;}
+    button{padding:6px 12px;border:1px solid #ccc;border-radius:6px;cursor:pointer;font-weight:600;}
+    button:disabled{opacity:0.5;cursor:not-allowed;}
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <h2 class="ck ck-title2"><span style="color:#41479b;"><strong>I say <img alt="" height="47" src="/courses/BOOSTENGLISH/document/Docs-communs/Icones/voicework.png" width="50" /></strong></span></h2>
+
+    <div class="card">
+      <h2>🎙️ Voicework</h2>
+      <p>
+        When speaking, <strong>content words</strong> (nouns, verbs, adjectives and adverbs) generally receive more stress than 
+        <strong>function words</strong> (determiners, auxiliary verbs, prepositions). Which of these content words receive the most emphasis will depend on the context and meaning.
+      </p>
+      <p class="alert alert-info">Listen to the following audio examples and identify which words (and which syllables within those words) receive more stress. 
+        Then repeat the phrases aloud and compare your own voice with the example.</p>
+    </div>
+    
+
+    <!-- PHRASES -->
+    <div class="card">
+      <div class="phrase">
+        <p><strong>He has blue eyes.</strong></p>
+        <audio controls>
+          <source src="/courses/TESTPERFORM/document/Docs-communs/Audio/he_has_blue_eyes.mp3" type="audio/mpeg">
+        </audio>
+        <div class="actions">
+          <button data-action="start">Start</button>
+          <button data-action="stop" disabled>Stop</button>
+        </div>
+        <audio class="student" controls style="display:none"></audio>
+      </div>
+
+      <div class="phrase">
+        <p><strong>This package is too heavy.</strong></p>
+        <audio controls>
+          <source src="/courses/TESTPERFORM/document/Docs-communs/Audio/this_package.mp3" type="audio/mpeg">
+        </audio>
+        <div class="actions">
+          <button data-action="start">Start</button>
+          <button data-action="stop" disabled>Stop</button>
+        </div>
+        <audio class="student" controls style="display:none"></audio>
+      </div>
+
+      <div class="phrase">
+        <p><strong>The baby slept soundly through the night.</strong></p>
+        <audio controls>
+          <source src="/courses/TESTPERFORM/document/Docs-communs/Audio/baby_slept.mp3" type="audio/mpeg">
+        </audio>
+        <div class="actions">
+          <button data-action="start">Start</button>
+          <button data-action="stop" disabled>Stop</button>
+        </div>
+        <audio class="student" controls style="display:none"></audio>
+      </div>
+
+      <div class="phrase">
+        <p><strong>He spoke softly to the child.</strong></p>
+        <audio controls>
+          <source src="/courses/TESTPERFORM/document/Docs-communs/Audio/spoke_softly.mp3" type="audio/mpeg">
+        </audio>
+        <div class="actions">
+          <button data-action="start">Start</button>
+          <button data-action="stop" disabled>Stop</button>
+        </div>
+        <audio class="student" controls style="display:none"></audio>
+      </div>
+
+      <div class="phrase">
+        <p><strong>He is currently living in the centre of town, but he would like to move to a rural village.</strong></p>
+        <audio controls>
+          <source src="/courses/TESTPERFORM/document/Docs-communs/Audio/currently_living.mp3" type="audio/mpeg">
+        </audio>
+        <div class="actions">
+          <button data-action="start">Start</button>
+          <button data-action="stop" disabled>Stop</button>
+        </div>
+        <audio class="student" controls style="display:none"></audio>
+      </div>
+    </div>
+
+    <!-- NOTE -->
+    <div class="note">
+      If in doubt concerning word and syllable stress, check a dictionary. Word stress is usually indicated by an apostrophe (') placed before the stressed syllable. 
+      <em>(ex. ‘heavy, inter’national)</em>
+    </div>
+
+  </div>
+
+  <script>
+    (function(){
+      document.querySelectorAll('.phrase').forEach((block, idx)=>{
+        const startBtn = block.querySelector('button[data-action="start"]');
+        const stopBtn = block.querySelector('button[data-action="stop"]');
+        const player = block.querySelector('.student');
+        let mediaRecorder, chunks=[];
+
+        startBtn.addEventListener('click', async ()=>{
+          chunks=[];
+          try {
+            const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.ondataavailable = e => e.data.size && chunks.push(e.data);
+            mediaRecorder.onstop = ()=>{
+              const blob = new Blob(chunks, {type:mediaRecorder.mimeType||'audio/webm'});
+              const url = URL.createObjectURL(blob);
+              player.src=url; player.style.display='block';
+            };
+            mediaRecorder.start();
+            startBtn.disabled=true; stopBtn.disabled=false;
+          } catch(err){
+            alert('Microphone not available. Please allow mic access.');
+          }
+        });
+
+        stopBtn.addEventListener('click', ()=>{
+          if(mediaRecorder && mediaRecorder.state!=='inactive') mediaRecorder.stop();
+          startBtn.disabled=false; stopBtn.disabled=true;
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

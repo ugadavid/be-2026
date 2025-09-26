@@ -1,0 +1,234 @@
+<html>
+<head>
+  <title>Vocabulary – Directions (Bilingual Toggle)</title>
+  <link href="https://echamilo.univ-grenoble-alpes.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+  <style>
+    :root{
+      --be-blue:#41479b;
+      --be-orange:#f5a623;
+      --be-dark:#353535;
+      --be-text:#444545;
+      --be-muted:#6b6b6b;
+      --be-bg:#f7f7f7;
+      --be-card:#fff;
+      --radius:12px;
+      --gap:16px;
+    }
+    body{color:var(--be-text);font-size:18px;line-height:1.45;}
+    h1{color:var(--be-blue);font-size:30px;font-weight:700;display:flex;align-items:center;gap:10px;margin:0 0 12px;}
+    h2{color:var(--be-blue);font-size:22px;margin:0 0 8px;}
+    h3{margin:0 0 8px;font-size:20px;color:var(--be-dark);}
+    .page{margin-inline:0;padding:20px;} /* aligné à gauche, pas centré */
+    .tabs{display:inline-flex;gap:6px;background:var(--be-bg);border-radius:999px;padding:4px;margin:6px 0 14px;}
+    .tab{border:0;background:transparent;padding:8px 14px;border-radius:999px;font-weight:700;color:var(--be-dark);cursor:pointer}
+    .tab[aria-selected="true"]{background:var(--be-orange);color:#fff;}
+    .card{background:var(--be-card);border:1px solid #ececec;border-radius:var(--radius);padding:20px;box-shadow:0 1px 2px rgba(0,0,0,.05);margin-bottom:18px;}
+    .note{background:var(--be-bg);padding:12px 16px;border-left:4px solid var(--be-orange);border-radius:var(--radius);margin:12px 0;}
+    .subgrid{display:grid;gap:var(--gap);}
+    .subgrid.cols-2{grid-template-columns:1fr 1fr;}
+    @media (max-width:720px){.subgrid.cols-2{grid-template-columns:1fr;}}
+    ul{margin:10px 0 0 20px;padding:0;}
+    li{margin:6px 0;}
+    a{color:var(--be-orange);text-decoration:none;font-weight:700;}
+    a:hover{text-decoration:underline;}
+    .hint{color:var(--be-muted);font-size:.95rem;margin-top:8px;}
+    .sep{height:1px;background:#eee;margin:10px 0;}
+
+    /* Vidéo 560×315 responsive jusqu’à max 560 */
+    .video{position:relative;width:100%;max-width:560px;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#000;}
+    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+    /* Listes bilingues en <dl> */
+    .terms{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;align-items:start;margin-top:10px;}
+    .terms dt{font-weight:600;color:var(--be-dark);}
+    .terms dd{margin:0;color:var(--be-text);}
+    @media (max-width:720px){.terms{grid-template-columns:1fr;}}
+
+    [hidden]{display:none !important;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>
+      <span>Vocabulary</span>
+      <img alt="" height="40" src="/courses/TESTPERFORM/document/Docs-communs/Icones/keywords.png" width="43" />
+    </h1>
+
+    <!-- Onglets -->
+    <div class="tabs" role="tablist" aria-label="Language">
+      <button class="tab" role="tab" id="tab-en" aria-controls="panel-en" aria-selected="true">English 🇬🇧</button>
+      <button class="tab" role="tab" id="tab-fr" aria-controls="panel-fr" aria-selected="false">Français 🇫🇷</button>
+    </div>
+
+    <!-- PANEL ENGLISH -->
+    <section id="panel-en" role="tabpanel" aria-labelledby="tab-en">
+      <!-- SECTION 1 -->
+      <div class="card">
+        <div class="note"><strong>There are 4 major word classes in English:</strong> nouns, adjectives, verbs and adverbs.</div>
+
+        <div class="subgrid cols-2">
+          <div>
+            <h2>1) Instructions – Left</h2>
+            <ul>
+              <li>Go left.</li>
+              <li>Turn left.</li>
+              <li>Take a left.</li>
+              <li>Take the second (turning) on the left.</li>
+            </ul>
+          </div>
+          <div>
+            <h2>1) Instructions – Right</h2>
+            <ul>
+              <li>Go right.</li>
+              <li>Turn right.</li>
+              <li>Take a right.</li>
+              <li>Take the second (turning) on the right.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div>
+          <h3>Movement / Path</h3>
+          <ul>
+            <li>Go up / go down (the street / the road / the avenue)</li>
+            <li>Go straight ahead / go straight on / go along (the street)</li>
+            <li>Go over (the bridge)</li>
+            <li>Go through (the park)</li>
+            <li>Cross (the street)</li>
+            <li>Go (a)round the roundabout</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION 2 -->
+      <div class="card">
+        <h2>2) Transition words</h2>
+        <ul>
+          <li><strong>Then</strong>, …</li>
+          <li><strong>Next</strong>, …</li>
+          <li><strong>After that</strong>, …</li>
+          <li><strong>When you get to</strong> …</li>
+          <li><strong>Finally</strong>, …</li>
+        </ul>
+      </div>
+
+      <!-- SECTION 3 -->
+      <div class="card">
+        <div class="section-head">
+          <h2>3) Prepositions of location</h2>
+        </div>
+        <ul>
+          <li>Next to / beside</li>
+          <li>Between</li>
+          <li>Opposite / across from</li>
+          <li>In front of</li>
+          <li>Behind</li>
+          <li>On the corner of</li>
+          <li>On the left / right</li>
+        </ul>
+
+        <p class="hint">Watch this short clip to see the prepositions in action (<strong>2:33</strong> → <strong>3:07</strong>).</p>
+        <div class="video" aria-label="Prepositions of location – video excerpt">
+          <iframe
+            src="https://www.youtube.com/embed/IDEuyJwOiyA?start=154&end=187"
+            title="Prepositions of Location – excerpt 2:33–3:07"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="hint">Need the French translations? Switch to <strong>Français</strong> above ☝️</div>
+    </section>
+
+    <!-- PANEL FRANÇAIS -->
+    <section id="panel-fr" role="tabpanel" aria-labelledby="tab-fr" hidden>
+      <div class="card">
+        <div class="note">
+          Il existe <strong>quatre grandes catégories de mots</strong> en anglais :
+          <strong>noms, adjectifs, verbes</strong> et <strong>adverbes</strong>.
+        </div>
+
+        <h2>1) Instructions – Verbes & Prépositions</h2>
+        <dl class="terms">
+          <dt>Go left.</dt><dd>Allez à gauche.</dd>
+          <dt>Turn left.</dt><dd>Tournez à gauche.</dd>
+          <dt>Take a left.</dt><dd>Prenez à gauche.</dd>
+          <dt>Take the second (turning) on the left.</dt><dd>Prenez la deuxième à gauche.</dd>
+
+          <dt>Go right.</dt><dd>Allez à droite.</dd>
+          <dt>Turn right.</dt><dd>Tournez à droite.</dd>
+          <dt>Take a right.</dt><dd>Prenez à droite.</dd>
+          <dt>Take the second (turning) on the right.</dt><dd>Prenez la deuxième à droite.</dd>
+
+          <dt>Go up / go down (the street / road / avenue)</dt><dd>Montez / Descendez (la rue / la route / l’avenue).</dd>
+          <dt>Go straight ahead / on / go along (the street)</dt><dd>Allez tout droit / Continuez tout droit / Suivez (la rue).</dd>
+          <dt>Go over (the bridge)</dt><dd>Traversez (le pont).</dd>
+          <dt>Go through (the park)</dt><dd>Passez par / Traversez (le parc).</dd>
+          <dt>Cross (the street)</dt><dd>Traversez (la rue).</dd>
+          <dt>Go (a)round the roundabout)</dt><dd>Faites le tour du rond-point.</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <h2>2) Mots de transition</h2>
+        <dl class="terms">
+          <dt>Then, …</dt><dd>Puis, … / Ensuite, …</dd>
+          <dt>Next, …</dt><dd>Ensuite, … / Après, …</dd>
+          <dt>After that …</dt><dd>Après cela, …</dd>
+          <dt>When you get to …</dt><dd>Quand vous arrivez à …</dd>
+          <dt>Finally, …</dt><dd>Enfin, … / Finalement, …</dd>
+        </dl>
+      </div>
+
+      <div class="card">
+        <h2>3) Prépositions de lieu</h2>
+        <dl class="terms">
+          <dt>Next to / beside</dt><dd>À côté de</dd>
+          <dt>Between</dt><dd>Entre</dd>
+          <dt>Opposite / across from</dt><dd>En face de</dd>
+          <dt>In front of</dt><dd>Devant</dd>
+          <dt>Behind</dt><dd>Derrière</dd>
+          <dt>On the corner of</dt><dd>Au coin de</dd>
+          <dt>On the left / right</dt><dd>À gauche / À droite</dd>
+        </dl>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (function(){
+      const tabs = document.querySelectorAll('.tab');
+      const panels = { en: document.getElementById('panel-en'), fr: document.getElementById('panel-fr') };
+      const key = 'be-lang';
+
+      const saved = localStorage.getItem(key);
+      if(saved && panels[saved]) setLang(saved);
+
+      tabs.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const id = btn.id === 'tab-en' ? 'en' : 'fr';
+          setLang(id);
+        });
+        btn.addEventListener('keydown', (e)=>{
+          if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+            e.preventDefault();
+            const next = btn.id === 'tab-en' ? document.getElementById('tab-fr') : document.getElementById('tab-en');
+            next.focus(); next.click();
+          }
+        });
+      });
+
+      function setLang(lang){
+        document.getElementById('tab-en').setAttribute('aria-selected', lang==='en');
+        document.getElementById('tab-fr').setAttribute('aria-selected', lang==='fr');
+        panels.en.hidden = (lang !== 'en');
+        panels.fr.hidden = (lang !== 'fr');
+        localStorage.setItem(key, lang);
+      }
+    })();
+  </script>
+</body>
+</html>

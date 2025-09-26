@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="https://echamilo.univ-grenoble-alpes.fr/">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://chamilo.grenoble-inp.fr/web/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+<title>Boost&#39;English - Way-finding</title>
+
+<style>
+/* ===== BASE ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;          /* 👈 le body ne scrolle PAS */
+}
+h2.ck.ck-title2,
+h2.ck.ck-title2 * {
+  margin-top: 0;
+  margin-bottom: 8px;        /* espace mini sous le titre */
+}
+
+/* ===== ZOOM WRAP : un SEUL scroll ici ===== */
+.zoom-wrap {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 40px); /* réserve un peu de place pour le <h2> */
+  overflow: auto;             /* 👈 un seul scroll (auto), ici 0 (hidden) */
+
+}
+
+/* ===== CONTAINER (scaled) ===== */
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* taille logique AVANT scale pour que le wrap sache scroller */
+  width: calc(100% / 0.8);
+  height: calc(100% / 0.8);
+  transform: scale(0.8);          /* 👈 20% plus petit */
+  transform-origin: top left;
+}
+
+/* ===== BACKGROUND ===== */
+.container .background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== COLUMNS ===== */
+.left, .right {
+  position: relative;
+  z-index: 1;
+  padding: clamp(16px, 4vw, 48px);
+}
+.left { overflow: hidden; }
+.right { background: none; }
+
+/* ===== DECOR ABSOLU ===== */
+.left img { position: absolute; max-width: 100%; height: auto; }
+.left .astronaut { bottom: 8vh; left: 25vw; width: clamp(120px, 18vw, 220px); }
+.left .stars     { top: 20vh; left: 30vw; width: clamp(20px, 5vw, 60px); }
+.left .rocket    { top: 2vh;  left: 2vw;  width: clamp(40px, 8vw, 100px); }
+
+/* ===== PANEL ===== */
+.panel {
+  background: rgba(250,250,250,0.85);
+  border-radius: 12px;
+  padding: clamp(12px, 2vw, 20px);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+.panel-left {
+  position: absolute;
+  top: 15vh;
+  left: 5vw;
+  max-width: 320px;
+  background: rgba(250,250,250,0.9);
+}
+
+/* ===== RIGHT SIDE TITLES ===== */
+.stack { display:flex; flex-direction:column; gap:clamp(12px,2vh,20px); max-width:clamp(420px,35vw,600px); color:#000; }
+.text-block { font-size:clamp(14px,2vw,22px); line-height:1.4; font-weight:bold; }
+.right .title, .right .at-the-end {
+  display:block; width:clamp(200px,35vw,460px);
+  margin: 0 0 clamp(12px,2vw,24px) 0;
+}
+.right .title { width: 300px; }
+.right .at-the-end.small { width: 200px; }
+
+/* ===== BOTTOM DECO ===== */
+.hand { position:absolute; bottom:5vh; right:4vw; width:clamp(60px,15vw,150px); }
+.progress-bar { position:absolute; bottom:5vh; left:4vw; width:clamp(180px,35vw,380px); }
+</style>
+
+</head>
+
+<body>
+  
+  <h2 class="ck ck-title2"><span style="color:#41479b;"><strong>Introduction</strong></span></h2>
+
+  <div class="zoom-wrap">
+    <div class="container">
+      <img alt="Background" src="/courses/BOOSTENGLISH/document/themes/fond_1.png" class="background" />
+
+      <div class="left">
+        <img alt="Astronaut" src="/courses/BOOSTENGLISH/document/themes/boostaunot_1.png" class="astronaut" />
+        <img alt="Stars" src="/courses/BOOSTENGLISH/document/themes/stars.png" class="stars" />
+        <img alt="Rocket" src="/courses/BOOSTENGLISH/document/themes/logo.png" class="rocket" />
+
+        <!--div class="panel panel-left">
+          <h3>CONTENT</h3>
+          <p>You will:</p>
+          <ol>
+            <li>Listen to a song and complete a short exercise.</li>
+            <li>Watch a video to learn more about adjectives.</li>
+            <li>Practice key grammar using various types of exercises.</li>
+            <li>Test your knowledge using a timed quiz </li>
+            <li>You can explore the subject further using the resources provided if you wish.</li>
+          </ol>
+          <p><b>TIME:</b> approx. 30 mins<br><b>CEFR level:</b> A2</p>
+        </div-->
+      </div>
+
+      <div class="right">
+        <img alt="Learning Objectives" src="/courses/BOOSTENGLISH/document/themes/learning-objectives.png" class="title" />
+        <img alt="At the end" src="/courses/BOOSTENGLISH/document/themes/end_1.png" class="at-the-end" />
+        <div class="stack">
+          <div class="text-block">
+            <p>At the end of this brick you will be able to...</p>
+            <ul>
+              <li>Identify adjectives in a sentence</li>
+              <li>Tell the difference between adjectives and adverbs</li>
+              <li>Recognize and use common adjectives</li>
+            </ul>
+          </div>
+        </div>
+        <img alt="Hand icon" src="/courses/BOOSTENGLISH/document/themes/hand.png" class="hand" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* =======================
+   Boost'English – Intro (fond non étiré)
+   Le fond garde son ratio 1536×1024 et sert de "frame".
+   La colonne droite se cale sur la couture du fond.
+   ======================= */
+
+/* ---- Curseurs ----
+   --top-gap : hauteur occupée au-dessus (h2, trait, etc.)
+   --scale   : échelle globale de la frame (1.00 = taille maquette)
+   --seam    : position de la couture (colonne gauche) en % de la frame
+*/
+:root{
+  --top-gap: 60px;   /* ↑ augmente si le bas est coupé (64, 68...) */
+  --scale: 0.70;     /* 0.60–0.80 selon ton confort visuel */
+  --seam: 55%;       /* 56–60% pour aligner pile la séparation brique/orange */
+  --right-nudge: -15%; /* -0.5% à -3% généralement suffisent */
+}
+
+/* ===== Base ===== */
+html, body{
+  margin:0; padding:0;
+  font-family: Arial, sans-serif;
+  width:100%; height:100%;
+  overflow:hidden; /* aucun scroll */
+}
+
+/* Titre CKEditor : marges maîtrisées */
+h2.ck.ck-title2, h2.ck.ck-title2 *{ margin:0; }
+h2.ck.ck-title2{ margin:8px 0; }
+
+/* ===== Frame : même taille que le visuel (1536×1024), puis mise à l'échelle =====
+   NB: on n’essaie PAS de remplir l’écran. On garde la "vraie" taille du fond,
+   puis on scale l’ensemble (fond + contenu) avec --scale. */
+.be-intro-container{
+  --bg-w: 1305;  /* largeur "maquette" en px */
+  --bg-h: 870;  /* hauteur "maquette" en px */
+
+  position: fixed;
+  top: var(--top-gap);
+  left: 0;                /* ancré à gauche ; mets 50% + translateX(-50%) si tu veux centrer */
+  width:  calc(var(--bg-w) * 1px);
+  height: calc(var(--bg-h) * 1px);
+
+  transform: scale(var(--scale));
+  transform-origin: top left;
+
+  display: grid;
+  grid-template-columns: var(--seam) calc(100% - var(--seam));
+  /* debug: border:1px dashed teal; */
+}
+
+/* ===== Background : occupe 100% de la frame (PAS du viewport) ===== */
+.be-intro-container img[alt="Background"]{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  z-index:0; pointer-events:none;
+}
+
+/* ===== Colonnes ===== */
+.be-intro-left,
+.be-intro-right{
+  position:relative;
+  z-index:1;
+  /* padding relatif au viewport ok ici (confort) */
+  padding: clamp(16px, 4vw, 40px);
+}
+.be-intro-left{ overflow:hidden; }
+
+.be-intro-right{
+  transform: translateX(var(--right-nudge));
+}
+
+/* ===== Décors (positions en % de la frame/colonne, pas en vw/vh) ===== */
+.be-intro-left img{
+  position:absolute; 
+  max-width:100%; 
+  height:auto;
+}
+.be-intro-left img[alt="Astronaut"]{ bottom: 3%;  left: 60%; width: clamp(120px, 25%, 220px); }
+.be-intro-left img[alt="Stars"]{   bottom:   83%; left: 55%; width: clamp(20px,   8%,  60px); }
+.be-intro-left img[alt="Rocket"]{    top:    2%; left:  2%; width: clamp(40px,  18%, 100px); }
+
+/* ===== Panneau ===== */
+.panel{
+  background: rgba(250,250,250,.85);
+  border-radius:12px;
+  padding: clamp(12px, 2vw, 20px);
+  padding-top:4px; padding-bottom:4px;
+  box-shadow:0 6px 16px rgba(0,0,0,.12);
+}
+.panel-left{
+  position:absolute; 
+  top:15%; left:10%;
+  max-width:320px;
+  background: rgba(250,250,250,.9);
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Titres + contenu à droite ===== */
+.stack{
+  display:flex; 
+  flex-direction:column; 
+  gap:clamp(12px,2vh,20px); 
+  
+  color:#000;
+}
+.text-block{ 
+  font-size:clamp(24px,2vw,22px); 
+  line-height:1.4; 
+  font-weight:bold; 
+}
+
+.be-intro-right img[alt="Learning Objectives"],
+.be-intro-right img[alt="At the end"]{
+  display:block; 
+  width:clamp(200px, 100%, 460px);
+  margin: 0 0 clamp(12px,2vw,24px) 0;
+}
+.be-intro-right img[alt="Learning Objectives"]{ width:400px; }
+.be-intro-right img[alt="At the end"].small{  width:200px; }
+
+/* ===== Déco bas droite ===== */
+img[alt="Hand icon"]{
+  position:absolute; 
+  bottom:8%; right:6%;
+  width:clamp(60px, 30%, 150px);
+}
+
+/* Optionnel : barre de progression si nécessaire */
+.progress-bar{
+  position:absolute; 
+  bottom:5%; left:4%;
+  width:clamp(180px,35%,380px);
+}
