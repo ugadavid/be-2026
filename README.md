@@ -5,8 +5,8 @@
 
 # E-learning
 
-![Planning](https://echamilo.univ-grenoble-alpes.fr/courses/BOOSTENGLISH/document/Docs-communs/Icones/autonomy.png)
-
+![Planning](assets/icons/autonomy.png)
+https://echamilo.univ-grenoble-alpes.fr/courses/BOOSTENGLISH/document/Docs-communs/Icones/autonomy.png
 
 https://echamilo.univ-grenoble-alpes.fr/courses/BOOSTENGLISH/document/Docs-communs/Icones/goal.png
 
