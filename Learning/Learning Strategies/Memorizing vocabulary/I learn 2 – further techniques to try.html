@@ -1,0 +1,58 @@
+<html>
+<head>
+	<link href="https://echamilo.univ-grenoble-alpes.fr/css/editor.css" media="screen" rel="stylesheet" type="text/css" />
+	<title></title>
+	<style type="text/css">h1 {            color: #41479b;            font-size: 30px;            font-weight: bold;        }        h2 {            color: #d80027;            font-size: 25px;        }        h3 {            color: #575656;            font-size: 20px;            font-weight: bold;        }        p {            color: #444545;            font-size: 18px;            font-weight: 500;        }        ins {            background-color: #41479B;            display: block;     text-align: center;   }        a:link {            color: #D80027;            text-decoration: none;            font-weight: bold;        }        a:hover {            color: #D80027;            font-weight: bold;        }        .bloc-gauche {            width: 50%;            display: inline-block;        }        .bloc-droite {            width: 50%;            display: inline-block;            position: absolute;        }
+    #overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;             /* caché au départ */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+	</style>
+</head>
+<body>
+<h2 class="ck ck-title2"><span style="color:#41479b;"><strong>I learn 2 -&nbsp;further techniques to try.&nbsp;<img alt="" height="47" src="/courses/BOOSTENGLISH/document/Docs-communs/Icones/watchandlisten.png" width="50" /></strong></span></h2>
+
+<p class="alert alert-info">Always keep in mind that vocabulary can be learned/memorized using a variety of strategies. It is very important that you use more than one strategy to learn new words. Think of every strategy as an alternative road that leads you to the destination. Your brain needs more than one road to make sure it reaches the destination every time (i.e. remembers the words in the long run). </p>
+
+<p>Here are some suggested strategies. Try them out and find the ones that work for you!<p>
+<p>INLINGUA. 2019. "How To Learn Vocabulary In A Foreign Language - <a href="https://idc.edu/blog/12-tried-true-ways-learn-foreign-language-vocabulary/" target="_blank">12 Tried Ways</a>". Inlingua Washington DC, January 25.</p>
+<p>1) Read the following article and note down the 12 techniques mentioned in your own words. <br/>
+<ul>
+    <li>Have you tried any of these methods?</li>
+    <li>Which methods can be connected to the "word spider web" method tested in this brick?</li>
+    <li>Which methods would you be interested in trying?</li>
+</ul></p>
+<p>2) Test your understanding of the article with <a href="https://echamilo.univ-grenoble-alpes.fr/main/exercise/exercise_submit.php?cidReq=BOOSTENGLISH&id_session=0&gidReq=0&gradebook=0&origin=quick_learnpath&exerciseId=2336&origin=quick_learnpath&learnpath_id=872&learnpath_item_id=12217&learnpath_item_view_id=867999">this short quiz</a>.</p>
+
+
+
+<!-- Layer caché par défaut -->
+<div id="overlay">
+  <div class="overlay-content">
+    <p>This diagram illustrates the type of word spiderweb the speaker suggests. Does it look as you imagined?</p>
+    <img src="/courses/BOOSTENGLISH/document/commun/learning/vocabulary/game_word_web.png" alt="Word spiderweb diagram" width="400">
+    <br>
+    <button onclick="document.getElementById('overlay').style.display='none'">Close</button>
+  </div>
+</div>
+
+
+</p>
+</body>
+</html>
