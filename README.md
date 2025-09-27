@@ -29,5 +29,5 @@ https://echamilo.univ-grenoble-alpes.fr/courses/BOOSTENGLISH/document/Docs-commu
 ![voicework](assets/icons/voicework_50.png)
 https://echamilo.univ-grenoble-alpes.fr/courses/BOOSTENGLISH/document/Docs-communs/Icones/voicework.png
 
-![voicework](assets/icons/voicework_50.png)
-https://echamilo.univ-grenoble-alpes.fr/courses/BOOSTENGLISH/document/Docs-communs/Icones/voicework.png
+![watchandlisten](assets/icons/watchandlisten_50.png)
+https://echamilo.univ-grenoble-alpes.fr/courses/BOOSTENGLISH/document/Docs-communs/Icones/watchandlisten.png
